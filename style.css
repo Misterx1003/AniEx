@@ -1,0 +1,74 @@
+/* Стили для неонового эффекта */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #0e0e0e;
+  color: #fff;
+  margin: 0;
+  padding: 0;
+}
+
+.neon-text {
+  font-size: 2rem;
+  text-align: center;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  animation: neon 1.5s ease-in-out infinite alternate;
+}
+
+/* Неоновая анимация */
+@keyframes neon {
+  0% {
+    text-shadow: 0 0 5px #ff007d, 0 0 10px #ff007d, 0 0 20px #ff007d, 0 0 30px #ff007d, 0 0 40px #ff007d, 0 0 50px #ff007d, 0 0 75px #ff007d;
+  }
+  100% {
+    text-shadow: 0 0 5px #00d4ff, 0 0 10px #00d4ff, 0 0 20px #00d4ff, 0 0 30px #00d4ff, 0 0 40px #00d4ff, 0 0 50px #00d4ff, 0 0 75px #00d4ff;
+  }
+}
+
+header {
+  background-color: #222;
+  padding: 50px;
+  text-align: center;
+}
+
+footer {
+  background-color: #222;
+  padding: 20px;
+  text-align: center;
+  font-size: 14px;
+  color: #ccc;
+}
+
+.anime-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.anime-card {
+  background-color: #1f1f1f;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  box-shadow: 0 0 15px rgba(255, 0, 123, 0.5);
+}
+
+.anime-card:hover {
+  transform: scale(1.05);
+}
+
+.anime-card img {
+  width: 100%;
+  border-bottom: 3px solid #ff007d;
+}
+
+.anime-card h3 {
+  padding: 10px;
+  text-align: center;
+  font-size: 16px;
+  color: #ff007d;
+  background-color: #222;
+  margin: 0;
+}

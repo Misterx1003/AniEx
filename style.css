@@ -1,3 +1,35 @@
+/* Стили для логотипа */
+.logo {
+  width: 150px; /* Ширина логотипа */
+  height: auto; /* Сохранение пропорций */
+  display: block;
+  margin: 10px 0;
+}
+
+header {
+  background-color: #333;
+  color: white;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin-left: 20px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+}
 /* Стили для неонового эффекта */
 body {
   font-family: 'Segoe UI', sans-serif;

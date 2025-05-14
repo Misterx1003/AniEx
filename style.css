@@ -1,5 +1,4 @@
-
-/* Основной стиль страницы */
+/* Стили для неонового эффекта */
 body {
   font-family: 'Segoe UI', sans-serif;
   background-color: #0e0e0e;
@@ -8,7 +7,6 @@ body {
   padding: 0;
 }
 
-/* Неоновый текст */
 .neon-text {
   font-size: 2rem;
   text-align: center;
@@ -18,47 +16,30 @@ body {
   animation: neon 1.5s ease-in-out infinite alternate;
 }
 
-/* Анимация неонового свечения */
+/* Неоновая анимация */
 @keyframes neon {
   0% {
-    text-shadow:
-      0 0 5px #ff007d,
-      0 0 10px #ff007d,
-      0 0 20px #ff007d,
-      0 0 30px #ff007d,
-      0 0 40px #ff007d,
-      0 0 50px #ff007d,
-      0 0 75px #ff007d;
+    text-shadow: 0 0 5px #ff007d, 0 0 10px #ff007d, 0 0 20px #ff007d, 0 0 30px #ff007d, 0 0 40px #ff007d, 0 0 50px #ff007d, 0 0 75px #ff007d;
   }
   100% {
-    text-shadow:
-      0 0 5px #00d4ff,
-      0 0 10px #00d4ff,
-      0 0 20px #00d4ff,
-      0 0 30px #00d4ff,
-      0 0 40px #00d4ff,
-      0 0 50px #00d4ff,
-      0 0 75px #00d4ff;
+    text-shadow: 0 0 5px #00d4ff, 0 0 10px #00d4ff, 0 0 20px #00d4ff, 0 0 30px #00d4ff, 0 0 40px #00d4ff, 0 0 50px #00d4ff, 0 0 75px #00d4ff;
   }
 }
 
-/* Шапка (только здесь серая зона) */
 header {
-  background-color: #222; /* Серая зона ТОЛЬКО здесь */
+  background-color: #222;
   padding: 50px;
   text-align: center;
 }
 
-/* Подвал */
 footer {
-  background-color: transparent;
+  background-color: #222;
   padding: 20px;
   text-align: center;
   font-size: 14px;
   color: #ccc;
 }
 
-/* Контейнер с карточками */
 .anime-container {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
@@ -66,9 +47,8 @@ footer {
   padding: 20px;
 }
 
-/* Карточка аниме */
 .anime-card {
-  background-color: #0e0e0e;
+  background-color: #1f1f1f;
   border-radius: 10px;
   overflow: hidden;
   transition: transform 0.3s ease;
@@ -89,6 +69,6 @@ footer {
   text-align: center;
   font-size: 16px;
   color: #ff007d;
-  background-color: #0e0e0e;
+  background-color: #222;
   margin: 0;
 }

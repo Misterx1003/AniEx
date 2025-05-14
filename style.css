@@ -44,8 +44,14 @@ body {
 /* Шапка (только здесь серая зона) */
 header {
   background-color: #222; /* Серая зона ТОЛЬКО здесь */
-  padding: 50px;
+  padding: 50px 0;
   text-align: center;
+}
+
+/* Контейнер логотипа */
+.header-content {
+  max-width: 600px; /* Ширина логотипа/арта */
+  margin: 0 auto;
 }
 
 /* Подвал */

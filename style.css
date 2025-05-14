@@ -41,18 +41,26 @@ body {
   }
 }
 
+/* Шапка */
 header {
-  background-color: transparent;
   padding: 50px 0;
   text-align: center;
+  background-color: transparent; /* Убираем фон у шапки */
 }
 
-.header-content {
-  background-color: #222;
-  max-width: 600px;
-  margin: 0 auto;
+/* Контейнер для логотипа */
+.header-container {
+  background-color: #222; /* Серая зона */
+  width: 600px; /* Ширина контейнера */
+  margin: 0 auto; /* Центрируем контейнер */
   padding: 20px;
   border-radius: 10px;
+}
+
+/* Логотип */
+.header-container img {
+  width: 100%; /* Логотип растягивается по ширине контейнера */
+  border-bottom: 3px solid #ff007d;
 }
 
 /* Подвал */

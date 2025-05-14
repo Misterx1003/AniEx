@@ -43,24 +43,24 @@ body {
 
 /* Шапка */
 header {
+  background-color: transparent;
   padding: 50px 0;
   text-align: center;
-  background-color: transparent; /* Убираем фон у шапки */
 }
 
-/* Контейнер для логотипа */
+/* Контейнер с логотипом и заголовком */
 .header-container {
   background-color: #222; /* Серая зона */
-  width: 600px; /* Ширина контейнера */
-  margin: 0 auto; /* Центрируем контейнер */
+  width: 420px; /* Чуть больше логотипа */
+  margin: 0 auto;
   padding: 20px;
   border-radius: 10px;
 }
 
-/* Логотип */
+/* Убедись, что логотип не выходит за пределы */
 .header-container img {
-  width: 100%; /* Логотип растягивается по ширине контейнера */
-  border-bottom: 3px solid #ff007d;
+  width: 100%;
+  height: auto;
 }
 
 /* Подвал */

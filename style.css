@@ -41,17 +41,18 @@ body {
   }
 }
 
-/* Шапка (только здесь серая зона) */
 header {
-  background-color: #222; /* Серая зона ТОЛЬКО здесь */
+  background-color: transparent;
   padding: 50px 0;
   text-align: center;
 }
 
-/* Контейнер логотипа */
 .header-content {
-  max-width: 600px; /* Ширина логотипа/арта */
+  background-color: #222;
+  max-width: 600px;
   margin: 0 auto;
+  padding: 20px;
+  border-radius: 10px;
 }
 
 /* Подвал */

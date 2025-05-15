@@ -1,21 +1,37 @@
-<!-- login.html -->
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8">
   <title>Вход</title>
-  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <h1>Вход</h1>
   <form id="login-form">
-    <input type="text" id="login-username" name="username" placeholder="Имя пользователя" autocomplete="username" required />
-    <input type="password" id="login-password" name="password" placeholder="Пароль" autocomplete="current-password" required />
+    <input type="text" id="login-username" placeholder="Имя пользователя" required />
+    <input type="password" id="login-password" placeholder="Пароль" required />
     <button type="submit">Войти</button>
   </form>
 
-  <!-- подключение скрипта -->
-  <script src="login.js"></script>
+  <script>
+    document.getElementById('login-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      const enteredUsername = document.getElementById('login-username').value;
+      const enteredPassword = document.getElementById('login-password').value;
+
+      const savedUsername = localStorage.getItem('registeredUsername');
+      const savedPassword = localStorage.getItem('registeredPassword');
+
+      // Проверка введенных данных
+      if (enteredUsername === savedUsername && enteredPassword === savedPassword) {
+        // Сохраняем текущего пользователя
+        localStorage.setItem('currentUser', enteredUsername);
+        window.location.href = 'dashboard.html';  // Перенаправление на страницу dashboard
+      } else {
+        alert('Неверное имя пользователя или пароль');
+      }
+    });
+  </script>
 </body>
 </html>
 

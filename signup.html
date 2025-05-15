@@ -1,5 +1,31 @@
-<form id="signup-form">
-  <input type="text" id="signup-username" placeholder="Имя пользователя" required />
-  <input type="password" id="signup-password" placeholder="Пароль" required />
-  <button type="submit">Зарегистрироваться</button>
-</form>
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Регистрация</title>
+</head>
+<body>
+  <h1>Регистрация</h1>
+  <form id="signup-form">
+    <input type="text" id="signup-username" placeholder="Имя пользователя" required />
+    <input type="password" id="signup-password" placeholder="Пароль" required />
+    <button type="submit">Зарегистрироваться</button>
+  </form>
+
+  <script>
+    document.getElementById('signup-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      const username = document.getElementById('signup-username').value;
+      const password = document.getElementById('signup-password').value;
+
+      // Сохраняем в localStorage
+      localStorage.setItem('registeredUsername', username);
+      localStorage.setItem('registeredPassword', password);
+
+      alert('Регистрация прошла успешно!');
+      window.location.href = 'login.html';
+    });
+  </script>
+</body>
+</html>

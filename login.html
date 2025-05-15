@@ -1,36 +1,21 @@
+<!-- login.html -->
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>Вход</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <h1>Вход</h1>
   <form id="login-form">
-    <input type="text" id="login-username" placeholder="Имя пользователя" required />
-    <input type="password" id="login-password" placeholder="Пароль" required />
+    <input type="text" id="login-username" name="username" placeholder="Имя пользователя" autocomplete="username" required />
+    <input type="password" id="login-password" name="password" placeholder="Пароль" autocomplete="current-password" required />
     <button type="submit">Войти</button>
   </form>
 
-  <script>
-    document.getElementById('login-form').addEventListener('submit', function(e) {
-      e.preventDefault();
-
-      const enteredUsername = document.getElementById('login-username').value;
-      const enteredPassword = document.getElementById('login-password').value;
-
-      const savedUsername = localStorage.getItem('registeredUsername');
-      const savedPassword = localStorage.getItem('registeredPassword');
-
-      if (enteredUsername === savedUsername && enteredPassword === savedPassword) {
-        // сохраняем текущего пользователя
-        localStorage.setItem('currentUser', enteredUsername);
-        window.location.href = 'dashboard.html';
-      } else {
-        alert('Неверное имя пользователя или пароль');
-      }
-    });
-  </script>
+  <!-- подключение скрипта -->
+  <script src="login.js"></script>
 </body>
 </html>
 

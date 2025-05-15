@@ -1,4 +1,10 @@
 /* Основной стиль страницы */
+img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
 body {
   font-family: 'Segoe UI', sans-serif;
   background-color: #0e0e0e;
@@ -61,6 +67,12 @@ header {
 .header-container img {
   width: 100%;
   height: auto;
+}
+
+.logo-container {
+  background-color: #808080; /* серый цвет */
+  padding: 20px; /* увеличивает пространство вокруг логотипа */
+  text-align: center; /* выравнивание логотипа по центру */
 }
 
 /* Подвал */

@@ -8,19 +8,26 @@
 </head>
 <body>
   <header>
-  <div class="header-container">
-    <img src="logo-removebg-preview.png" alt="AniEx" style="width: 400px; height: 150px;">
-    <h1 class="neon-text">AniEx</h1>
-  </div>
-</header>
+    <div class="header-container">
+      <img src="logo-removebg-preview.png" alt="AniEx" style="width: 400px; height: 150px;">
+      <h1 class="neon-text">AniEx</h1>
+    </div>
+  </header>
 
   <main>
     <h2 class="neon-text">Популярные аниме</h2>
     <div class="anime-container" id="anime-list">
-    <h3 id="user-greeting">Добро пожаловать на AniEx!</h3>
-<a href="login.html">Вход</a> | <a href="signup.html">Регистрация</a>
-<div id="anime-list"></div>
-      <!-- Аниме будут загружаться сюда -->
+      <!-- Приветствие с именем пользователя -->
+      <h3 id="user-greeting">Добро пожаловать на AniEx!</h3>
+
+      <!-- Панель входа/регистрации или кнопка "Выйти" -->
+      <div id="auth-links">
+        <a href="login.html">Вход</a> | <a href="signup.html">Регистрация</a>
+      </div>
+      <button id="logout-btn" style="display: none;">Выйти</button>
+
+      <!-- Здесь будет список аниме -->
+      <div id="anime-list"></div>
     </div>
   </main>
 
@@ -29,23 +36,27 @@
   </footer>
 
   <script src="script.js"></script>
-   <script>
+
+  <!-- Скрипт для приветствия и выхода -->
+  <script>
     const currentUser = localStorage.getItem('currentUser');
     const greeting = document.getElementById('user-greeting');
     const authLinks = document.getElementById('auth-links');
     const logoutBtn = document.getElementById('logout-btn');
 
-    // Если пользователь вошёл, отображаем его имя
+    // Если пользователь вошел, отображаем его имя
     if (currentUser) {
-      greeting.textContent = `Привет, ${currentUser}!`;  // Приветствие с именем
+      greeting.textContent = `Привет, ${currentUser}!`;  // Приветствие с именем пользователя
       authLinks.style.display = 'none';  // Скрыть ссылки на вход и регистрацию
       logoutBtn.style.display = 'inline-block';  // Показать кнопку "Выйти"
     }
 
     // Логика для выхода
     logoutBtn.addEventListener('click', () => {
-      localStorage.removeItem('currentUser');  // Удалить имя пользователя
-      window.location.reload();  // Перезагрузить страницу
+      // НЕ удаляем currentUser, чтобы имя оставалось
+      localStorage.removeItem('currentUser');  // Удалить данные о текущем пользователе
+      window.location.href = 'index.html';  // Перенаправить на главную страницу
     });
+  </script>
 </body>
 </html>

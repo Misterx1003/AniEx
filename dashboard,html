@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Главная</title>
+</head>
+<body>
+  <h1 id="welcome-text">Привет!</h1>
+  <button onclick="logout()">Выйти</button>
+
+  <script>
+    const currentUser = localStorage.getItem('currentUser');
+    if (currentUser) {
+      document.getElementById('welcome-text').textContent = `Привет, ${currentUser}!`;
+    } else {
+      window.location.href = 'login.html'; // если пользователь не вошел
+    }
+
+    function logout() {
+      localStorage.removeItem('currentUser');
+      window.location.href = 'login.html';
+    }
+  </script>
+</body>
+</html>

@@ -22,9 +22,11 @@
       // Сохраняем в localStorage
       localStorage.setItem('registeredUsername', username);
       localStorage.setItem('registeredPassword', password);
+      localStorage.setItem('currentUser', username);  // Сохраняем имя пользователя для отображения
+
 
       alert('Регистрация прошла успешно!');
-      window.location.href = 'login.html';
+      window.location.href = 'index.html';  // Перенаправление на главную страницу
     });
   </script>
 </body>

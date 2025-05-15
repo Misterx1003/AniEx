@@ -1,9 +1,4 @@
 /* Основной стиль страницы */
-img {
-  width: 100%;
-  height: auto;
-  object-fit: contain;
-}
 
 body {
   font-family: 'Segoe UI', sans-serif;
@@ -56,24 +51,25 @@ header {
 
 /* Контейнер с логотипом и заголовком */
 .header-container {
-  background-color: #222; /* Серая зона */
-  width: 420px; /* Чуть больше логотипа */
+  background-color: #222;
+  text-align: center;
+  max-width: 1000px;      /* Больше ширина */
   margin: 0 auto;
-  padding: 20px;
+  padding: 40px 20px;     /* Больше отступов */
   border-radius: 10px;
+  box-shadow: 0 0 20px rgba(255, 0, 123, 0.4); /* Необязательно, но красиво */
 }
 
 /* Убедись, что логотип не выходит за пределы */
 .header-container img {
   width: 100%;
   height: auto;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;
 }
 
-.logo-container {
-  background-color: #808080; /* серый цвет */
-  padding: 20px; /* увеличивает пространство вокруг логотипа */
-  text-align: center; /* выравнивание логотипа по центру */
-}
+
 
 /* Подвал */
 footer {

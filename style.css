@@ -62,11 +62,10 @@ header {
 
 /* Убедись, что логотип не выходит за пределы */
 .header-container img {
-  width: 100%;
+  width: 100%; /* или укажите конкретную ширину, например, 400px */
   height: auto;
   object-fit: contain;
-  display: block;
-  margin: 0 auto;
+  max-width: 600px; /* максимальная ширина */
 }
 
 

@@ -114,3 +114,72 @@ footer {
   background-color: #0e0e0e;
   margin: 0;
 }
+.anime-carousel {
+  position: relative;
+  overflow: hidden;
+  padding: 20px;
+}
+
+.anime-list {
+  display: flex;
+  gap: 16px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding-bottom: 10px;
+}
+
+.anime-card {
+  flex: 0 0 auto;
+  width: 200px;
+  height: 300px;
+  background-color: #1a1a1a;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  box-shadow: 0 0 15px rgba(255, 0, 123, 0.5);
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.anime-card:hover {
+  transform: scale(1.05);
+}
+
+.scroll-button {
+  position: absolute;
+  top: 50%;
+  right: 5px;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  font-size: 24px;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 10;
+  box-shadow: 0 0 10px rgba(255, 0, 123, 0.7);
+  transition: background-color 0.3s ease;
+}
+
+.scroll-button:hover {
+  background-color: rgba(255, 0, 123, 0.8);
+}
+
+.view-all-button {
+  display: block;
+  margin: 20px auto;
+  padding: 12px 24px;
+  font-size: 16px;
+  background-color: #ff007d;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.view-all-button:hover {
+  background-color: #ff3399;
+}

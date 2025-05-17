@@ -87,33 +87,6 @@ footer {
   gap: 20px;
   padding: 20px;
 }
-
-/* Карточка аниме */
-.anime-card {
-  background-color: #0e0e0e;
-  border-radius: 10px;
-  overflow: hidden;
-  transition: transform 0.3s ease;
-  box-shadow: 0 0 15px rgba(255, 0, 123, 0.5);
-}
-
-.anime-card:hover {
-  transform: scale(1.05);
-}
-
-.anime-card img {
-  width: 100%;
-  border-bottom: 3px solid #ff007d;
-}
-
-.anime-card h3 {
-  padding: 10px;
-  text-align: center;
-  font-size: 16px;
-  color: #ff007d;
-  background-color: #0e0e0e;
-  margin: 0;
-}
 .anime-carousel {
   position: relative;
   overflow: hidden;
@@ -128,6 +101,7 @@ footer {
   padding-bottom: 10px;
 }
 
+/* Карточка аниме */
 .anime-card {
   flex: 0 0 auto;
   width: 200px;
@@ -183,3 +157,18 @@ footer {
 .view-all-button:hover {
   background-color: #ff3399;
 }
+
+.anime-card img {
+  width: 100%;
+  border-bottom: 3px solid #ff007d;
+}
+
+.anime-card h3 {
+  padding: 10px;
+  text-align: center;
+  font-size: 16px;
+  color: #ff007d;
+  background-color: #0e0e0e;
+  margin: 0;
+}
+

@@ -68,11 +68,22 @@ header {
   display: block;
   margin: 0 auto;
 }
-.image-container img {
-  width: 100%;
-  height: auto;
-  -webkit-mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
-  mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
+.image-container {
+  position: relative;
+  display: inline-block;
+}
+
+.image-container::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 20px;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 50%;
+  z-index: -1;
 }
 
 

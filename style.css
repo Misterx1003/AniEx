@@ -58,6 +58,18 @@ header {
   padding: 40px 20px;     /* Больше отступов */
   border-radius: 10px;
   box-shadow: 0 0 20px rgba(255, 0, 123, 0.4); /* Необязательно, но красиво */
+  position: relative;
+}
+.header-container::after {
+  content: "";
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 12px;
+  background: radial-gradient(ellipse at center, rgba(0,0,0,0.4), transparent);
+  z-index: 0;
 }
 
 /* Убедись, что логотип не выходит за пределы */
@@ -69,7 +81,8 @@ header {
   margin: 0 auto;
 }
 .image-container img {
-  clip-path: ellipse(50% 80% at 50% 50%);
+  -webkit-mask-image: linear-gradient(to bottom, black 85%, transparent 100%);
+  mask-image: linear-gradient(to bottom, black 85%, transparent 100%);
 }
 
 

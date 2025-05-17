@@ -68,22 +68,8 @@ header {
   display: block;
   margin: 0 auto;
 }
-.image-container {
-  position: relative;
-  display: inline-block;
-}
-
-.image-container::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 60px;
-  height: 20px;
-  background: rgba(0, 0, 0, 0.2);
-  border-radius: 50%;
-  z-index: -1;
+.image-container img {
+  clip-path: ellipse(50% 80% at 50% 50%);
 }
 
 
